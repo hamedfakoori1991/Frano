@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>6a4177fa-de6f-48e0-b0c7-bcdff37f3388</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+		<PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="19.225.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="19.225.1" />
+		<PackageReference Include="OpenIddict.Abstractions" Version="5.4.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.1" />
+		<!--    <PackageReference Include="Vistex.Cloud.Services.Sdk" Version="1.0.8" />-->
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Framework.WebApi\Framework.WebApi.csproj" />
+		<ProjectReference Include="..\VantageView.Contracts\VantageView.Contracts.csproj" />
+		<ProjectReference Include="..\VantageView.Domain\VantageView.Domain.csproj" />
+		<ProjectReference Include="..\VantageView.Infrastructure\VantageView.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>
